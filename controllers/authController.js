@@ -7,6 +7,14 @@ const handleErrors = (err) => {
     password: "",
   };
 
+  if (err.message === "email error") {
+    errors.email = "The email doesn't exist.";
+  }
+
+  if (err.message === "password error") {
+    errors.password = "The password is incorrect";
+  }
+
   //duplicate error code
   if (err?.code === 11000) {
     errors.email = "Duplicate email";
@@ -57,9 +65,12 @@ const login_post = async (req, res) => {
   const { email, password } = req.body || {};
   try {
     const user = await User.userLogin(email, password);
+    const token = createWebToken(user._id);
+    res.cookie("token", token, { httpOnly: true, maxAge: maxAge * 1000 });
     res.status(200).json({ user: user._id });
   } catch (e) {
-    res.status(400).json({});
+    const errors = handleErrors(e);
+    res.status(400).json({ errors });
   }
 };
 
