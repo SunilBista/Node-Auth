@@ -45,7 +45,6 @@
           headers: { "Content-Type": "application/json" },
         });
         const data = await result.json();
-        console.log("data", data);
         if (data.errors) {
           emailError.textContent = data.errors.email;
           passwordError.textContent = data.errors.password;
@@ -56,7 +55,6 @@
       } catch (e) {
         console.log(e);
       }
-      console.log(email, password);
     });
   </script>
   <%- include('./partials/footer.ejs') %>

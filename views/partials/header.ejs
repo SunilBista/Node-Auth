@@ -8,8 +8,13 @@
       <a href="/"><h1>My App</h1></a>
     </div>
     <ul>
+      <% if(user){ %>
+      <li>Welcome, <%= user.email %></li>
+      <li><a class="sign" href="/logout">Log out</a></li>
+      <% } else { %>
       <li><a href="/login">Login</a></li>
       <li><a class="sign" href="/signup">Sign Up</a></li>
+      <% } %>
     </ul>
   </nav>
 </head>

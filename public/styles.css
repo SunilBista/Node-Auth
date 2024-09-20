@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5dc;
-  color: #2f4f4f;
+  background-color: whitesmoke;
+  color: #36454f;
   margin: 0;
   padding: 0;
   max-width: 1300px;
@@ -36,14 +36,14 @@ nav li {
 }
 .app {
   padding: 8px;
-  background-color: #1e3838;
+  background-color: #36454f;
   color: white;
   border-radius: 8px;
   cursor: pointer;
 }
 .sign {
   padding: 8px;
-  background-color: #1e3838;
+  background-color: #36454f;
   color: white;
   border-radius: 8px;
 }
@@ -65,7 +65,7 @@ nav a {
 
 h1 {
   text-align: left;
-  color: #2f4f4f;
+  color: #36454f;
 }
 
 .signup-form {
@@ -93,12 +93,12 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #2f4f4f;
+  border-color: #36454f;
 }
 
 .submit-btn {
   padding: 0.75em;
-  background-color: #2f4f4f;
+  background-color: #36454f;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -123,7 +123,7 @@ input:focus {
 footer {
   margin-top: auto;
   text-align: center;
-  color: #2f4f4f;
+  color: #36454f;
   padding: 1em 0;
   width: 100%;
   font-size: 0.9em;
