@@ -1,9 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5dc; /* Cream background */
-  color: #2f4f4f; /* Slate text color */
+  background-color: #f5f5dc;
+  color: #2f4f4f;
   margin: 0;
   padding: 0;
+  max-width: 1300px;
+  padding: 0 20px;
 }
 p,
 a,
@@ -32,7 +34,13 @@ nav li {
   margin-left: 20px;
   position: relative;
 }
-
+.app {
+  padding: 8px;
+  background-color: #1e3838;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
 .sign {
   padding: 8px;
   background-color: #1e3838;
@@ -56,7 +64,7 @@ nav a {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   color: #2f4f4f;
 }
 

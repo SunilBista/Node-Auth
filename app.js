@@ -3,7 +3,7 @@ const app = express();
 const dbConnect = require("./config/dbConnect");
 const appRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
-
+const { checkAuth } = require("./middleware/authMiddleware");
 dbConnect()
   .then(() => {
     const port = process.env.PORT || 3000;
@@ -21,12 +21,11 @@ app.use(express.static(__dirname + "/public"));
 app.use(appRoutes);
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
+app.get("/", checkAuth, (req, res) => {
   console.log("Home");
   res.render("home");
 });
 
-app.get("/content", (req, res) => {
-  console.log("Home");
+app.get("/content", checkAuth, (req, res) => {
   res.render("content");
 });
