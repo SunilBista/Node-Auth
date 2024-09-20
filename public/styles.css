@@ -5,6 +5,45 @@ body {
   margin: 0;
   padding: 0;
 }
+p,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #222;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 1300px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+  position: relative;
+}
+
+.sign {
+  padding: 8px;
+  background-color: #1e3838;
+  color: white;
+  border-radius: 8px;
+}
+
+nav a {
+  color: #777;
+  font-weight: 300;
+}
 
 .signup-container {
   max-width: 400px;

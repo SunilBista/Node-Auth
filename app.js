@@ -25,3 +25,8 @@ app.get("/", (req, res) => {
   console.log("Home");
   res.render("home");
 });
+
+app.get("/content", (req, res) => {
+  console.log("Home");
+  res.render("content");
+});
