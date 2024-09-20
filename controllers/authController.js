@@ -1,3 +1,4 @@
+const User = require("../models/User");
 const signup_get = (req, res) => {
   res.render("signup");
 };
@@ -6,14 +7,22 @@ const login_get = (req, res) => {
   res.render("login");
 };
 
-const signup_post = (req, res) => {
+const signup_post = async (req, res) => {
   const { email, password } = req.body || {};
-  console.log("Email", email);
-  console.log("Password", password);
-  res.send("New Signup");
+  try {
+    const user = await User.create({
+      email,
+      password,
+    });
+    res.status(201).json(user);
+    console.log("New user signup");
+  } catch (err) {
+    console.log(err);
+    res.status(400).send("Error, user not created");
+  }
 };
 
-const login_post = (req, res) => {
+const login_post = async (req, res) => {
   const { email, password } = req.body || {};
   console.log("Email", email);
   console.log("Password", password);
