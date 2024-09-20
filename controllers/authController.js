@@ -7,10 +7,16 @@ const login_get = (req, res) => {
 };
 
 const signup_post = (req, res) => {
+  const { email, password } = req.body || {};
+  console.log("Email", email);
+  console.log("Password", password);
   res.send("New Signup");
 };
 
 const login_post = (req, res) => {
+  const { email, password } = req.body || {};
+  console.log("Email", email);
+  console.log("Password", password);
   res.send("User Login");
 };
 
