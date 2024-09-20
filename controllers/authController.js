@@ -55,9 +55,12 @@ const signup_post = async (req, res) => {
 
 const login_post = async (req, res) => {
   const { email, password } = req.body || {};
-  console.log("Email", email);
-  console.log("Password", password);
-  res.send("User Login");
+  try {
+    const user = await User.userLogin(email, password);
+    res.status(200).json({ user: user._id });
+  } catch (e) {
+    res.status(400).json({});
+  }
 };
 
 module.exports = {
