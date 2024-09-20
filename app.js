@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const dbConnect = require("./config/dbConnect");
-
+const appRoutes = require("./routes/authRoutes");
 dbConnect()
   .then(() => {
     const port = process.env.PORT || 3000;
@@ -16,6 +16,7 @@ dbConnect()
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(appRoutes);
 
 app.get("/", (req, res) => {
   console.log("Home");
