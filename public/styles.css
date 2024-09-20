@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5dc; /* Cream background */
+  color: #2f4f4f; /* Slate text color */
+  margin: 0;
+  padding: 0;
+}
+
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: #2f4f4f;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2f4f4f;
+}
+
+.submit-btn {
+  padding: 0.75em;
+  background-color: #2f4f4f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1e3838;
+}
+
+.form-error {
+  margin-top: 1em;
+  color: red;
+  text-align: center;
+}
+
+.form-error p {
+  margin: 0;
+}
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: #2f4f4f;
+  padding: 1em 0;
+  width: 100%;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+}
+
+#year {
+  font-weight: bold;
+}
