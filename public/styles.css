@@ -67,7 +67,7 @@ input:focus {
 .form-error {
   margin-top: 1em;
   color: red;
-  text-align: center;
+  text-align: left;
 }
 
 .form-error p {
