@@ -19,7 +19,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 20px auto;
-  max-width: 1300px;
 }
 nav ul {
   display: flex;
@@ -131,4 +130,22 @@ footer {
 
 #year {
   font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .site-title {
+    font-size: 12px;
+  }
+  .sign {
+    padding: 6px;
+  }
+
+  .app {
+    margin-top: 10px;
+    padding: 6px;
+    display: inline-block;
+  }
+  .content {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
