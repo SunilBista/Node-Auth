@@ -46,6 +46,8 @@ To set up the project locally, follow these steps:
      ```bash
      MONGODB_URI = your_mongodb_uri
      PORT=3000
+     JWT_SECRET = your_jwt_secret
+
      ```
 
 4. Start the application

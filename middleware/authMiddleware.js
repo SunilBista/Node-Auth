@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+const secretKey = process.env.JWT_SECRET;
+
 const checkAuth = (req, res, next) => {
   const token = req.cookies?.token;
   if (token) {
@@ -18,7 +20,7 @@ const checkAuth = (req, res, next) => {
 const checkUser = (req, res, next) => {
   const token = req.cookies?.token;
   if (token) {
-    jwt.verify(token, "sunil bista secret", async (err, decodedToken) => {
+    jwt.verify(token, secretKey, async (err, decodedToken) => {
       if (err) {
         res.locals.user = null;
         next();
